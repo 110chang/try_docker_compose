@@ -1,5 +1,6 @@
 FROM node:8
-COPY package.json package.json
+WORKDIR /app/src
+COPY package.json ./package.json
 RUN npm install
 COPY . ./
 RUN npm run build

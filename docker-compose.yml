@@ -1,10 +1,9 @@
 client:
   build: "./client"
   container_name: "client"
+  working_dir: "/app/src"
   ports:
     - "3000:3000"
-  volumes:
-    - "$PWD/client/src:/client/src"
 app:
   build: "./app"
   container_name: "app"
